@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;}
+
+body{
+    background-image: linear-gradient(to right, #001253, #6F38C5, #3E6D9C);}
+
+h1{
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    text-align: center;
+    margin: 80px 0px 0px;
+}
+
+#container{
+    background-image: linear-gradient(to right, blue, purple);
+    box-shadow: 5px 5px #fff;
+    color: #fff;
+    width: 480px;
+    height: 200px;
+    margin: 5% auto;
+    border: 1px solid #fff;
+    border-radius: 25px 100px;
+}
+
+#container:hover{
+    background-image: linear-gradient(to right, #CF0A0A, #FF7000);}
+
+.clock{
+    position: relative;
+    top: 35%;
+    left: 11%;
+    font-weight: bold;
+    font-size: 3.8rem;
+
+}

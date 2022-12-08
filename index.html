@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kenia&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Digital Clock start from here -->
+    <h1>Digital Clock</h1>
+    
+    <div id="container">
+        <div class="clock">
+            <span id="hours"></span>
+            <span>:</span>
+            <span id="minutes"></span>
+            <span>:</span>
+            <span id="seconds"></span>
+            <span id="session"></span>
+        </div>
+    </div>
+
+    <!-- Digital Clock end from here -->
+
+
+    <!-- javaScript start from here -->
+
+    <script type="text/javaScript">
+        function digitalClock() {
+            let dateTime = new Date();
+            let hrs = dateTime.getHours();
+            let min = dateTime.getMinutes();
+            let sec = dateTime.getSeconds();
+            let session = document.getElementById('session');
+
+            if (hrs >= 12) {
+                session.innerHTML = 'PM'
+            }else{
+                session.innerHTML = 'AM'
+            }
+
+            if (hrs >= 12) {
+                hrs -= 12;
+            }
+
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = min;
+            document.getElementById('seconds').innerHTML = sec;
+        }
+        setInterval(digitalClock, 1000);
+    </script>
+
+    <!-- javaScript end from here -->
+</body>
+</html>
